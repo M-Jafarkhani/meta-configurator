@@ -2,7 +2,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main
+      - rdf
 permissions:
   contents: write
 jobs:
@@ -16,7 +16,7 @@ jobs:
       - name: Install and Build
         env:
           USE_META_CONFIGURATOR_BASE_PATH: true  # Set to true for GitHub Pages deployment
-          VITE_FRONTEND_HOSTNAME: https://metaconfigurator.github.io/meta-configurator
+          VITE_FRONTEND_HOSTNAME: https://m-jafarkhani.github.io/meta-configurator
         run: |
           cd meta_configurator
           npm ci
